@@ -11,6 +11,7 @@ public class SearchinRotatedSortedArray {
 			}
 			else if(nums[start]<=nums[mid]){
 				//First half is unrotated
+				//Don't forget equal case here
 				if(target<nums[mid]&&target>=nums[start]){
 					end = mid-1;
 				}
@@ -20,6 +21,7 @@ public class SearchinRotatedSortedArray {
 			}
 			else{
 				//First half is rotated
+				//Don't forget equal case here
 				if(target<=nums[end]&&target>nums[mid]){
 					start = mid+1;
 				}
